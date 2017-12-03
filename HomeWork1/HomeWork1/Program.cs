@@ -17,12 +17,14 @@ namespace HomeWork1
             Game.Load();
             Timer timer = new Timer { Interval = 100 };
             timer.Start();
-            timer.Tick += Timer_Tick;            Application.Run(form);
+            timer.Tick += Timer_Tick;
+            Application.Run(form);
         }
         private static void Timer_Tick(object sender, EventArgs e)
         {
             Game.Draw();
             Game.Update();
-        }
+        }
+
     }
 }

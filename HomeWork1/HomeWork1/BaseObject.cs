@@ -27,6 +27,5 @@ namespace HomeWork1
             if (Pos.Y < 0) Dir.Y = -Dir.Y;
             if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
         }
-
     }
 }
