@@ -9,13 +9,14 @@ namespace HomeWork1
 {
     class Ship : BaseObject
     {
-        Image Plane = Image.FromFile("Plane.jpg");
+        Bitmap Plane = new Bitmap("Plane.jpg");
         public Ship(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
         }
         public override void Draw()
         {
-            Game.Buffer.Graphics.DrawImage(Plane, 400, 20);
+            Plane.MakeTransparent(Color.FromArgb(0, 0, 0));
+            Game.Buffer.Graphics.DrawImage(Plane, 20, 200);
         }
     }
 }

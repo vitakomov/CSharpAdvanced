@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Drawing;
+using System.Drawing;
+
 namespace HomeWork1
 {
     class BaseObject
@@ -25,6 +26,7 @@ namespace HomeWork1
             if (Pos.X > Game.Width) Dir.X = -Dir.X;
             if (Pos.Y < 0) Dir.Y = -Dir.Y;
             if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
-        }
+        }
+
     }
 }
