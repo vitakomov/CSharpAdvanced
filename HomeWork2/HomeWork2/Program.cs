@@ -15,7 +15,7 @@ namespace HomeWork1
             form.Show();
             Game.Draw();
             Game.Load();
-            Timer timer = new Timer { Interval = 100 };
+            Timer timer = new Timer { Interval = 50 };
             timer.Start();
             timer.Tick += Timer_Tick;
             Application.Run(form);

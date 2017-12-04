@@ -16,7 +16,17 @@ namespace HomeWork1
         public override void Draw()
         {
             planet.MakeTransparent(Color.FromArgb(0, 0, 0));
-            SplashScreen.Buffer.Graphics.DrawImage(planet, Pos.X, Pos.Y, Size.Width, Size.Height);
+            Game.Buffer.Graphics.DrawImage(planet, Pos.X, Pos.Y, Size.Width, Size.Height);
+        }
+
+        public override void Update()
+        {
+            Pos.X = Pos.X + Dir.X;
+            Pos.Y = Pos.Y + Dir.Y;
+            if (Pos.X < 0) Dir.X = -Dir.X;
+            if (Pos.X > Game.Width) Dir.X = -Dir.X;
+            if (Pos.Y < 0) Dir.Y = -Dir.Y;
+            if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
         }
     }
 }

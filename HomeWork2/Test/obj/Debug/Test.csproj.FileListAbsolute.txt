@@ -1,0 +1,7 @@
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\bin\Debug\Test.exe.config
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\bin\Debug\Test.exe
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\bin\Debug\Test.pdb
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\obj\Debug\Test.exe
+C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\Test\obj\Debug\Test.pdb

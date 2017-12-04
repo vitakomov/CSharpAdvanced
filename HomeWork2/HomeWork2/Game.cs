@@ -17,11 +17,13 @@ namespace HomeWork1
         public static BaseObject[] objs;
         public static void Load()
         {
+            Random rnd = new Random();
+            int s = 0;
             objs = new BaseObject[31];
             for (int i = 0; i < objs.Length / 2; i++)
-                objs[i] = new Planet(new Point(600, i * 20), new Point(-i-1, -i-1), new Size(10, 10));
+            { s = rnd.Next(10, 30);  objs[i] = new Planet(new Point(rnd.Next(20, 800), rnd.Next(20, 600)), new Point(rnd.Next(3, 10), rnd.Next(3, 10)), new Size(s, s)); }
             for (int i = objs.Length / 2; i < objs.Length; i++)
-                objs[i] = new Star(new Point(600, i * 20), new Point(-i, 0), new Size(5, 5));
+                objs[i] = new Star(new Point(rnd.Next(20, 800), rnd.Next(250, 600)), new Point(-i, 0), new Size(5, 5));
             objs[30] = new Ship(new Point(20, 200), new Point(0, 0), new Size(30, 15));
         }
 

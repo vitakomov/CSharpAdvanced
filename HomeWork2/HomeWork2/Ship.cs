@@ -13,6 +13,11 @@ namespace HomeWork1
         {
             Plane.MakeTransparent(Color.FromArgb(0, 0, 0));
             Game.Buffer.Graphics.DrawImage(Plane, Pos.X, Pos.Y);
-        }        
+        }
+
+        public override void Update()
+        {
+
+        }
     }
 }
