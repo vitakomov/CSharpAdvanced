@@ -16,7 +16,7 @@ namespace HomeWork1
         public override void Draw()
         {
             planet.MakeTransparent(Color.FromArgb(0, 0, 0));
-            Game.Buffer.Graphics.DrawImage(planet, Pos.X, Pos.Y, Size.Width, Size.Height);
+            SplashScreen.Buffer.Graphics.DrawImage(planet, Pos.X, Pos.Y, Size.Width, Size.Height);
         }
     }
 }

@@ -11,10 +11,10 @@ namespace HomeWork1
             Form form = new Form();
             form.Width = 800;
             form.Height = 600;
-            Game.Init(form);
+            SplashScreen.Init(form);
             form.Show();
-            Game.Draw();
-            Game.Load();
+            SplashScreen.Draw();
+            SplashScreen.Load();
             Timer timer = new Timer { Interval = 100 };
             timer.Start();
             timer.Tick += Timer_Tick;
@@ -22,9 +22,8 @@ namespace HomeWork1
         }
         private static void Timer_Tick(object sender, EventArgs e)
         {
-            Game.Draw();
-            Game.Update();
+           SplashScreen.Draw();
+           SplashScreen.Update();
         }
-
     }
 }

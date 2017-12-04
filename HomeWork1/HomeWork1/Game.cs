@@ -22,7 +22,7 @@ namespace HomeWork1
                 objs[i] = new Planet(new Point(600, i * 20), new Point(-i-1, -i-1), new Size(10, 10));
             for (int i = objs.Length / 2; i < objs.Length; i++)
                 objs[i] = new Star(new Point(600, i * 20), new Point(-i, 0), new Size(5, 5));
-            objs[30] = new Ship(new Point(200, 50), new Point(0, 0), new Size(30, 15));
+            objs[30] = new Ship(new Point(20, 200), new Point(0, 0), new Size(30, 15));
         }
 
         public static void Init(Form form)
@@ -48,6 +48,10 @@ namespace HomeWork1
         {
             foreach (BaseObject obj in objs)
                 obj.Update();
+        }
+        public static void Move(string key)
+        {
+            objs[30].Move(key);
         }
     }
 }

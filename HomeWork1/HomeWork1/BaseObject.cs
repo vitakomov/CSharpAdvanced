@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace HomeWork1
 {
@@ -26,6 +27,22 @@ namespace HomeWork1
             if (Pos.X > Game.Width) Dir.X = -Dir.X;
             if (Pos.Y < 0) Dir.Y = -Dir.Y;
             if (Pos.Y > Game.Height) Dir.Y = -Dir.Y;
+        }
+        public virtual void UpdateSplash()
+        {
+            Pos.X = Pos.X + Dir.X;
+            Pos.Y = Pos.Y + Dir.Y;
+            if (Pos.X < 0) Dir.X = -Dir.X;
+            if (Pos.X > SplashScreen.Width) Dir.X = -Dir.X;
+            if (Pos.Y < 0) Dir.Y = -Dir.Y;
+            if (Pos.Y > SplashScreen.Height) Dir.Y = -Dir.Y;
+        }
+        public virtual void Move(string key)
+        {
+            if (key == "LeftArrow") Pos.X += -1;
+            if (key == "RightArrow") Pos.X += 1;
+            if (key == "UpArrow") Pos.Y += -1;
+            if (key == "DownArrow") Pos.Y += 1;           
         }
     }
 }

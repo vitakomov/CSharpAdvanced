@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeWork1
 {
@@ -16,7 +12,7 @@ namespace HomeWork1
         public override void Draw()
         {
             Plane.MakeTransparent(Color.FromArgb(0, 0, 0));
-            Game.Buffer.Graphics.DrawImage(Plane, 20, 200);
-        }
+            Game.Buffer.Graphics.DrawImage(Plane, Pos.X, Pos.Y);
+        }        
     }
 }
