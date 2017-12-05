@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace HomeWork2
+namespace MyGame
 {
     static class Game
     {
@@ -13,18 +13,17 @@ namespace HomeWork2
         static Game()
         {
         }
-
-        public static BaseObject[] objs;
+        
+        public static Asteroid[] asteroids;
+        public static Bullet bullet;
         public static void Load()
         {
             Random rnd = new Random();
             int s = 0;
-            objs = new BaseObject[31];
-            for (int i = 0; i < objs.Length / 2; i++)
-            { s = rnd.Next(10, 30);  objs[i] = new Planet(new Point(rnd.Next(20, 800), rnd.Next(20, 600)), new Point(rnd.Next(3, 10), rnd.Next(3, 10)), new Size(s, s)); }
-            for (int i = objs.Length / 2; i < objs.Length; i++)
-                objs[i] = new Star(new Point(rnd.Next(20, 800), rnd.Next(250, 600)), new Point(-i, 0), new Size(5, 5));
-            objs[30] = new Ship(new Point(20, 200), new Point(0, 0), new Size(30, 15));
+            asteroids = new Asteroid[30];
+            for (int i = 0; i < asteroids.Length; i++)
+            { s = rnd.Next(10, 30);  asteroids[i] = new Asteroid(new Point(rnd.Next(20, 1900), rnd.Next(20, 1000)), new Point(rnd.Next(3, 10), rnd.Next(3, 10)), new Size(s, s)); }
+            bullet = new Bullet(new Point(0, rnd.Next(20, 1000)), new Point(rnd.Next(30, 50), 0), new Size(1, 5));
         }
 
         public static void Init(Form form)
@@ -34,28 +33,27 @@ namespace HomeWork2
             g = form.CreateGraphics();
             Width = form.Width;
             Height = form.Height;
-            if (Width < 1000 && Height < 1000 && Width > 0 && Height > 0)
+            if (Width < 2000 && Height < 2000 && Width > 0 && Height > 0)
                 Buffer = _context.Allocate(g, new Rectangle(0, 0, Width, Height));
             else throw new ArgumentOutOfRangeException("Не правильные размеры!");
         }
         public static void Draw()
         {
             Buffer.Graphics.Clear(Color.Black);
-            //Buffer.Graphics.DrawRectangle(Pens.White, new Rectangle(100, 100, 200, 200));
-            //Buffer.Graphics.FillEllipse(Brushes.Wheat, new Rectangle(100, 100, 200, 200));
-            if (objs!=null)
-            foreach (BaseObject obj in objs)
+            foreach (Asteroid obj in asteroids)
                 obj.Draw();
+            bullet.Draw();
             Buffer.Render();
         }
         public static void Update()
         {
-            foreach (BaseObject obj in objs)
-                obj.Update();
+            foreach (Asteroid a in asteroids)
+            {
+                a.Update();
+                if (a.Collision(bullet)) { Random rnd = new Random(); bullet = new Bullet(new Point(0, rnd.Next(20, 600)), new Point(rnd.Next(3, 10), 0), new Size(1, 3)); }
+            }
+            bullet.Update();
         }
-        public static void Move(string key)
-        {
-            objs[30].Move(key);
-        }
+
     }
 }

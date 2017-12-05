@@ -5,20 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeWork2
+namespace MyGame
 {
-    class Planet : BaseObject
+    class Asteroid : BaseObject
     {
-        Bitmap planet = new Bitmap("Planet.jpg");
-        public Planet(Point pos, Point dir, Size size) : base(pos, dir, size)
+        public Asteroid(Point pos, Point dir, Size size) : base(pos, dir, size)
         {
         }
         public override void Draw()
         {
-            planet.MakeTransparent(Color.FromArgb(0, 0, 0));
-            Game.Buffer.Graphics.DrawImage(planet, Pos.X, Pos.Y, Size.Width, Size.Height);
+            Game.Buffer.Graphics.FillEllipse(Brushes.Wheat, new Rectangle(Pos.X, Pos.Y, Size.Width, Size.Height));
         }
-
         public override void Update()
         {
             Pos.X = Pos.X + Dir.X;

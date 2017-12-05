@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace HomeWork1
+namespace HomeWork2
 {
     class Ship : BaseObject
     {

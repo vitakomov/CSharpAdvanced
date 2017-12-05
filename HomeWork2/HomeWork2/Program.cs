@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace HomeWork1
+namespace HomeWork2
 {
     class Program
     {

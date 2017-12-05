@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace HomeWork1
+namespace HomeWork2
 {
     abstract class BaseObject
     {
@@ -42,7 +42,7 @@ namespace HomeWork1
             if (key == "LeftArrow") Pos.X += -1;
             if (key == "RightArrow") Pos.X += 1;
             if (key == "UpArrow") Pos.Y += -1;
-            if (key == "DownArrow") Pos.Y += 1;           
+            if (key == "DownArrow") Pos.Y += 1;
         }
     }
 }
