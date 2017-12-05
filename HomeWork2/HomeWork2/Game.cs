@@ -34,7 +34,9 @@ namespace HomeWork1
             g = form.CreateGraphics();
             Width = form.Width;
             Height = form.Height;
-            Buffer = _context.Allocate(g, new Rectangle(0, 0, Width, Height));
+            if (Width < 1000 && Height < 1000 && Width > 0 && Height > 0)
+                Buffer = _context.Allocate(g, new Rectangle(0, 0, Width, Height));
+            else throw new ArgumentOutOfRangeException("Не правильные размеры!");
         }
         public static void Draw()
         {
