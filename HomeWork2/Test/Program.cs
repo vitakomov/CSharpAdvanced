@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Test
 {
@@ -10,25 +11,34 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //int[] arr = new int[10];
-            
-            //for (int i = 0; i < arr.Length; i++)
-            //    arr[i] = rnd.Next(0, 100);
-            //Array.Sort(arr);
-            //for (int i = 0; i < arr.Length; i++)
-            //    Console.WriteLine(arr[i]);
-            //Console.ReadLine();
-            Random rnd = new Random();
-            int c=0;
-            List<int> list = new List<int>();
-            for (int i = 0; i < 15; i++)
-                {
-                c = rnd.Next(0, 100);
-                list.Add(c);
-                }
-            foreach (var i in list)
-                Console.WriteLine(i);
-            Console.ReadLine();
+            Form form = new Form
+            {
+                Width = 800,
+                Height = 800
+            };
+            form.Show();
+            Timer timer = new Timer { Interval = 50 };
+            timer.Start();
+            timer.Tick += Timer_Tick;
+            Application.Run(form);
+        }
+        private static void Timer_Tick(object sender, EventArgs e)
+        {
+            ConsoleKeyInfo cki;
+
+            do
+            {
+                Console.WriteLine("\nPress a key to display; press the 'x' key to quit.");
+
+                // Your code could perform some useful task in the following loop. However, 
+                // for the sake of this example we'll merely pause for a quarter second.
+                while (Console.KeyAvailable == false)
+                    Console.WriteLine("1");   // Loop until input is entered.
+
+                cki = Console.ReadKey(true);
+                Console.WriteLine($"You pressed the {cki.Key} key.");
+            } while (cki.Key != ConsoleKey.X);
+            Application.Exit();
         }
     }
 }

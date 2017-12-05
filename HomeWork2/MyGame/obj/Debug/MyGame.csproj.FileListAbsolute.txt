@@ -5,3 +5,9 @@ C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\MyGame\obj\Debug\MyGame.csprojR
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\MyGame\obj\Debug\MyGame.csproj.CoreCompileInputs.cache
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\MyGame\obj\Debug\MyGame.exe
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\MyGame\obj\Debug\MyGame.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\bin\Debug\MyGame.exe.config
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\obj\Debug\MyGame.exe
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\obj\Debug\MyGame.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\bin\Debug\MyGame.exe
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\bin\Debug\MyGame.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\MyGame\obj\Debug\MyGame.csprojResolveAssemblyReference.cache

@@ -26,4 +26,5 @@ namespace MyGame
             Game.Update();
         }
     }
-}
+}
+

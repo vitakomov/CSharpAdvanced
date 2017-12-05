@@ -5,3 +5,9 @@ C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\HomeWork2\obj\Debug\HomeWork2.c
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\HomeWork2\obj\Debug\HomeWork2.csproj.CoreCompileInputs.cache
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\HomeWork2\obj\Debug\HomeWork2.exe
 C:\Users\Drinki\Desktop\CSharpAdvanced\HomeWork2\HomeWork2\obj\Debug\HomeWork2.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\bin\Debug\HomeWork2.exe.config
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\obj\Debug\HomeWork2.exe
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\obj\Debug\HomeWork2.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\bin\Debug\HomeWork2.exe
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\bin\Debug\HomeWork2.pdb
+C:\Users\DrinkinS\Desktop\C#Adv\HomeWork2\HomeWork2\obj\Debug\HomeWork2.csprojResolveAssemblyReference.cache
